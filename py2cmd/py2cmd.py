@@ -43,9 +43,6 @@ def install(script_name):
     File('build').rm()
     File('dist').rm()
     File(f'{script_name}.egg-info').rm()
-    HOME = os.environ['HOME']
-    bashrc = File(f'{HOME}/.bashrc').read()
-    Shell(bashrc).call()
 
 if __name__ == '__main__':
     main()
